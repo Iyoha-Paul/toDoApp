@@ -59,6 +59,7 @@ function addTodo(toDo, id, done, trash) {
 function clearTodoList() {
   todoListBox.innerHTML = '';
   todoList = [];
+  id = 0;
 }
 function completeTodo(element) {
   console.log(element);
