@@ -1,0 +1,35 @@
+$primary-color: #e8590c;
+$secondary-color: #ffffff;
+$text-color: #fdfdfd;
+$mobile: 30em;
+$desktopWidth: 30rem;
+$mainFont: "Rubik";
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+@mixin max-width {
+  max-width: $desktopWidth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  @include mobile {
+    font-size: 40%;
+  }
+}
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+@function set-test-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return white;
+  }
+}

@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 30em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Rubik", sans-serif;
+  color: #fdfdfd;
+}
+
+.btn {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  color: #e8590c;
+  background-color: #ffffff;
+  border-radius: 200px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  border: #e8590c solid 1px;
+}
+.btn--clear {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.8rem;
+}
+.btn:hover, .btn:focus, .btn:active {
+  background-color: #e8590c;
+  color: #ffffff;
+}
+
+.container {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  max-width: 30rem;
+  margin: 10rem auto;
+  margin-bottom: 0;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 10rem;
+  background-color: #e8590c;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  position: relative;
+}
+
+#date {
+  position: absolute;
+  left: 1.6rem;
+  bottom: 0.8rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 5rem;
+  height: 100%;
+  color: #e8590c;
+}
+
+.btn--plus {
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  border: none;
+  border-radius: 200px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e8590c;
+}
+.btn--plus:hover, .btn--plus:focus, .btn--plus:active {
+  background-color: #e8590c;
+  border: none;
+  border: #e8590c solid 1px;
+  color: #ffffff;
+}
+
+.add-item {
+  padding: 1rem 1em;
+  border-top: 1px solid #a0a0a0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.todo-text {
+  border: none;
+  font-size: 1.8rem;
+}
+
+.todo__list {
+  padding: 1.2rem 1.5rem;
+  height: 36rem;
+  list-style: none;
+  overflow: scroll;
+}
+.todo__list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.check {
+  display: inline-block;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 30px;
+  border: 1px solid #e8590c;
+}/*# sourceMappingURL=main.css.map */
