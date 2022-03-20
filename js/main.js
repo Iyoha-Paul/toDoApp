@@ -61,9 +61,12 @@ function clearTodoList() {
   todoList = [];
 }
 function completeTodo(element) {
-  element.classlist.toggle(check);
-  element.classlist.toggle(uncheck);
-  element.parentNode.querySelector('text').classlist.toggle(lineThrough);
+  console.log(element);
+  element.classList.toggle('check');
+  element.classList.toggle('uncheck');
+  element.parentNode.querySelector('.text').classList.toggle('lineThrough');
+  element.parentNode.querySelector('.fa-trash-can').classList.toggle('check');
+  element.parentNode.querySelector('.fa-trash-can').classList.toggle('uncheck');
   todoList[element.id].done ? false : true;
 }
 

@@ -121,12 +121,11 @@ body {
 .todo__container {
 }
 .check {
-  display: inline-block;
-  cursor: pointer;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 30px;
-  border: 1px solid $primary-color;
+  color: grey;
+}
+.lineThrough {
+  color: grey;
+  text-decoration: line-through;
 }
 // .btn {
 //   cursor: pointer;
