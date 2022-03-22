@@ -8,8 +8,21 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [["@babel/preset-env", { targets: "defaults" }]],
+            plugins: ["@babel/plugin-proposal-class-properties"],
+          },
+        },
+      },
+    ],
+    rules: [
+      {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },

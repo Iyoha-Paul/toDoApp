@@ -12,7 +12,7 @@ $mainFont: "Rubik";
 @mixin max-width {
   max-width: $desktopWidth;
 }
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
