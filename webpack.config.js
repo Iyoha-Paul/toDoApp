@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/js/app.js",
   mode: "development",
@@ -5,8 +6,17 @@ module.exports = {
     path: `${__dirname}/dist`,
     filename: "bundle.js",
   },
+  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
   module: {
     rules: [
+      {
+        test: /\.svg$/,
+        use: "svg-inline-loader",
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
@@ -19,11 +29,6 @@ module.exports = {
         },
       },
     ],
-    rules: [
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
-      },
-    ],
   },
 };
+// npm run build
